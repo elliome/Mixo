@@ -1,0 +1,119 @@
+.piano-roll-container{
+	margin-top:100px;
+	margin-left: calc((100vw - 1000px)/2);
+	width:1000px;
+	height:auto;
+
+	border-radius: 10px;
+	overflow: hidden;
+	user-select: none;
+	border-top-left-radius: 0px;
+}
+.piano-roll-controls-container{
+	width:100px;
+	margin:0px;
+	display: inline-block;
+	background-color: rgb(25, 25, 25);
+	height:50px;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+}
+.piano-roll-controls-icon{
+	margin-top: 10px;
+	color:white;
+	font-size: 2em;
+	margin-left: 12px;
+	cursor: pointer;
+}
+.piano-roll-cursor-container{
+	width:900px;
+	margin-left: -4px;
+	height: auto;
+	background-color: rgb(25, 25, 25);
+	display: inline-block;
+	vertical-align: bottom;
+	border-top-right-radius: 15px;
+}
+.piano-roll-cursor{
+	width:1px;
+	height:1px;
+	border: 10px solid transparent;
+	border-top-color: green;
+	transform: translateX(0px);
+	margin-bottom: -12px;
+	margin-left: -10px;
+	transition-timing-function: linear;
+	display: inline-block;
+}
+.piano-roll-note-track-container{
+	width: inherit;
+	height: 25px;
+	border-bottom:solid 1px  rgba(10,10,10,0.1);
+	background-color:  rgb(25, 25, 25);
+}
+.piano-roll-note-label{
+	padding-left: 10px;
+	width: 90px;
+	height: 100%;
+	display: inline-block;
+	margin: 0px;
+	color: white;
+	font-family: Segoe UI;
+}
+.piano-roll-note-track{
+	width: calc(100% - 100px);
+	background-color: rgb(28, 28, 28);
+	height: 100%;
+	/*display: inline-block;*/
+	margin: 0px;
+	float:right;
+}
+.piano-roll-track-bar{
+	height: inherit;
+	width:calc((100% )/4);
+	float:left;
+	margin: 0px;
+}
+.piano-roll-track-beat{
+	height: inherit;
+	width: calc(100%/4 - 1px);
+	border-left: rgba(10,10,10,0.6) solid 1px;
+	user-select: none;
+	overflow: hidden;
+	margin: 0px;
+	float:left;
+}
+.piano-roll-track-crotchet{
+	height: inherit;
+	width: calc(100%/4 - 1px);
+	border-right: rgba(10,10,10,0.3) solid 1px;
+	user-select: none;
+	margin: 0px;
+	float:left;
+}
+.midi-note{
+	display:inline-block;
+	height:25px;
+	width:12.813;
+	background-color:rgb(81, 255, 0);
+	position: absolute;
+	z-index: (3000);
+	border-radius:3px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.midi-note-side{
+	display: inline-block;
+	width:4px;
+	height:inherit;
+	margin-left:0px;
+	cursor:ew-resize;
+}
+.midi-note-left{
+	background-color:red;float:left;
+}
+.midi-note-right{
+	background-color:blue;float:right;
+}

@@ -1,0 +1,45 @@
+#drumroll-container{
+    background-color: rgb(15,15,15);
+    text-align: left;
+    margin-left: calc((100vw - 1000px)/2);
+    width:1000px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top:100px;
+}
+#drumroll-label-container{
+    width:250px;
+    display: inline-block;
+    text-align: left;
+    padding-left:15px;
+}
+.drumroll-label{
+    height:50px;
+    width:inherit;
+    border-bottom: black 1px solid;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 800;
+    margin-top:15px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-align: left;
+    padding-left: 15px;
+    display: inline-block;
+
+}
+#drumroll-canvas-container{
+    width:731px;
+    display: inline-block;
+    text-align: right;
+    height:inherit;
+    vertical-align: top;
+    height:264px;   
+    background-color: rgb(15,15,15);
+    overflow-x: scroll;
+}
+#drumroll-canvas{
+    height:100%;
+}

@@ -1,0 +1,103 @@
+#drum-pattern-container{
+	margin-top:100px;
+	margin-left: calc((100vw - 1000px)/2);
+	width:1000px;
+	height:auto;
+
+	border-radius: 10px;
+	overflow: hidden;
+	user-select: none;
+	border-top-left-radius: 0px;
+}
+.drum-pattern-track-container{
+	height:100px;
+	width:inherit;
+	color:white;
+	font-family: Segoe UI;
+	overflow: hidden;
+	background-color: rgb(28, 28, 28);
+}
+.drum-pattern-track-container:nth-child(even){
+	background-color: rgb(25, 25, 25);
+}
+.drum-pattern-track-icon-container{
+	background-color: rgb(25, 25, 25);
+	width:100px;
+	height:inherit;
+	display:inline-block;
+	float:left;
+}
+.drum-pattern-track-bar{
+	height: inherit;
+	width:calc((100% - 100px)/4);
+	display:inline-block;
+	float:left;
+}
+.drum-pattern-track-bar:nth-child(odd){
+	background-color: rgba(0, 0, 0, 0.09);
+}
+.drum-pattern-track-beat{
+	display:inline-block;
+	height: inherit;
+	width: calc(100%/4 - 1px);
+	border-left: rgba(10,10,10,0.6) solid 1px;
+	user-select: none;
+	overflow: hidden;
+}
+.drum-pattern-track-crotchet{
+	display:inline-block;
+	height: inherit;
+	width: calc(100%/4 - 0.8px);
+	border-right: rgba(10,10,10,0.3) solid 1px;
+	user-select: none;
+}
+.drum-pattern-track-crotchet:nth-child(4){
+	border-right: rgba(10,10,10,0.3) solid 0px;
+}
+.drum-pattern-track-third{
+		display:inline-block;
+		height: inherit;
+		width: calc(100%/3 - 0.66px);
+		border-right: rgba(10,10,10,0.3) solid 1px;
+		user-select: none;
+}
+.drum-pattern-track-third:nth-of-type(3){
+	border-right: rgba(10,10,10,0.3) solid 0px;
+}
+#drum-pattern-cursor-container{
+	width:900px;
+	margin-left: -4px;
+	height: auto;
+	background-color: rgb(25, 25, 25);
+	display: inline-block;
+	vertical-align: bottom;
+	border-top-right-radius: 15px;
+}
+#drum-pattern-cursor{
+	width:1px;
+	height:1px;
+	border: 10px solid transparent;
+	border-top-color: green;
+	transform: translateX(0px);
+	margin-bottom: -12px;
+	margin-left: -10px;
+	transition-timing-function: linear;
+	display: inline-block;
+}
+#drum-pattern-controls-container{
+	width:100px;
+	margin:0px;
+	display: inline-block;
+	background-color: rgb(25, 25, 25);
+	height:50px;
+	border-top-right-radius: 15px;
+		border-top-left-radius: 15px;
+}
+.drum-pattern-controls-icon{
+	margin-top: 10px;
+	color:white;
+	font-size: 2em;
+	margin-left: 12px;
+	cursor: pointer;
+
+}

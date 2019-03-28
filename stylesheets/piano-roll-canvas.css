@@ -1,0 +1,272 @@
+.piano-roll-container{
+	margin-top:50px;
+	margin-left: calc((100vw - 1000px)/2);
+	width:1000px;
+	height:auto;
+
+	border-radius: 10px;
+	overflow: hidden;
+	user-select: none;
+	border-top-left-radius: 0px;
+}
+.piano-roll-controls-container{
+	width:100%;
+	margin:0px;
+	display: inline-block;
+	/* background-color: rgb(12, 9, 13); */
+	height:50px;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+	text-align: left;
+	position: relative;
+	overflow: hidden;
+	z-index: 99;
+}
+.piano-roll-controls-container::before{
+	content: "";
+	position: absolute;
+	width: 200%;
+	height: 100%;
+	top:0px;
+	left:0px;
+	background: linear-gradient(152deg, rgba(255,63,20,.9) 0%, rgba(255,20,108,.8) 34%, rgba(188,40,255,.8) 67%, rgba(40,167,255,1) 100%);
+	animation: loop2 10s ease-in-out 0s infinite normal forwards;
+	z-index: -99;
+}
+.piano-roll-controls-icon{
+	margin-top: 10px;
+	color:white;
+	font-size: 2em;
+	margin-left: 12px;
+	cursor: pointer;
+	display: inline-block;
+}
+.piano-roll-cursor-container{
+	width:0px;
+	margin-left: -4px;
+	height: auto;
+	background-color: rgb(25, 25, 25);
+	display: inline-block;
+	vertical-align: bottom;
+	border-top-right-radius: 15px;
+}
+.piano-roll-cursor{
+	width:1px;
+	height:1px;
+	border: 10px solid transparent;
+	border-top-color: green;
+	transform: translateX(0px);
+	margin-bottom: -12px;
+	margin-left: -10px;
+	transition-timing-function: linear;
+	display: inline-block;
+}
+.piano-roll-note-label-container{
+	width: 100px;
+	min-height: 50px;
+	border-bottom:solid 1px  rgba(10,10,10,0.1);
+	background-color:  rgb(25, 25, 25);
+	display: inline-block;
+	text-align: left;
+}
+.piano-roll-note-label{
+	padding-left: 10px;
+	width: 90px;
+	height: 18px;
+	display: inline-block;
+	margin: 0px;
+	color: white;
+	font-family: Segoe UI;
+	font-size:0.8em;
+	background-color: rgb(12, 9, 13);
+}
+.piano-roll-note-track{
+	width: 100px;
+	background-color: rgb(28, 28, 28);
+	height: 100%;
+	/*display: inline-block;*/
+	margin: 0px;
+	float:right;
+}
+.piano-roll-track-bar{
+	height: inherit;
+	width:calc((100% )/4);
+	float:left;
+	margin: 0px;
+}
+.piano-roll-track-beat{
+	height: inherit;
+	width: calc(100%/4 - 1px);
+	border-left: rgba(10,10,10,0.6) solid 1px;
+	user-select: none;
+	overflow: hidden;
+	margin: 0px;
+	float:left;
+}
+.piano-roll-track-crotchet{
+	height: inherit;
+	width: calc(100%/4 - 1px);
+	border-right: rgba(10,10,10,0.3) solid 1px;
+	user-select: none;
+	margin: 0px;
+	float:left;
+}
+.midi-note{
+	display:inline-block;
+	height:25px;
+	width:12.813;
+	background-color:rgb(81, 255, 0);
+	position: absolute;
+	z-index: 3000;
+	border-radius:3px;
+	text-overflow: ellipsis;
+	overflow: hidden;	
+	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.midi-note-side{
+	display: inline-block;
+	width:4px;
+	height:inherit;
+	margin-left:0px;
+	cursor:ew-resize;
+}
+.midi-note-left{
+	background-color:red;float:left;
+}
+.midi-note-right{
+	background-color:blue;float:right;
+}
+#pianoroll-container{
+	height: auto;
+	width: calc(100% - 100px);
+	display: inline-block;
+	overflow-x: scroll;
+	vertical-align: top;
+}
+#pianoroll-container::-webkit-scrollbar{
+	overflow: hidden;
+	height: 10px;
+}
+#pianoroll-container::-webkit-scrollbar-track{
+	height:10px;
+	
+	border-bottom-left-radius: 10px;
+}
+#pianoroll-container::-webkit-scrollbar-thumb{
+	background: rgba(12, 9, 13,.9); 
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background: linear-gradient(152deg, rgba(255,63,20,1) 0%, rgba(255,20,108,1) 34%, rgba(188,40,255,1) 67%, rgba(40,167,255,1) 100%);
+}
+#pianoroll{
+	display: inline-block;
+	height: 100%;
+	vertical-align: bottom;
+}
+#pianoroll-settings-container{
+	height:auto;
+	margin-top:100px;
+	margin-left: calc((100vw - 1000px)/2);
+	width:1000px;
+	border-radius: 10px;
+}
+.settings-panel-title{
+	color:white;
+	margin-left:20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 900;
+	text-transform: uppercase;
+	width:calc(100% - 40px);
+	border-bottom:1px solid rgb(47, 47, 47);
+	padding-bottom:20px;
+	margin-top:25px;
+	font-size: 2em;
+}
+.settings-panel-section{
+	width:46%;
+	display:inline-block;
+	margin-left: 15px;
+	vertical-align: top;
+	height:auto;
+	margin-bottom: 0px;
+	margin-top:-10px;
+	min-height: 20px;
+}
+.setting-container{
+	padding-bottom:40px;
+	height: auto;
+	width:100%;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-bottom:1px;
+	display: inline-block;
+}
+.settings-label{
+	color:white;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	max-width: 150px;
+	padding:5px;
+	text-transform: uppercase;
+	font-weight: 900;
+	float:left;
+	margin: 0px;
+}
+.settings-multichoice-container{
+	height:auto;
+	width:auto;
+	float: right;
+}
+div.settings-multichoice-option{
+	float: right;
+	height:25px;
+	width:auto;
+	padding-left: 10px;
+	padding-right:10px;
+	background-color: rgb(28, 27, 27);
+	margin-left: 5px;
+	border-radius: 5px;
+	vertical-align: bottom;
+	cursor: pointer;
+	
+}
+p.settings-multichoice-option{
+	margin-top:5px;
+	padding:0px;
+	color:white;
+	font-size:12px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-transform:uppercase;
+	vertical-align: bottom;
+	height:5px;
+	font-weight: 900
+}
+.slider{
+	margin-top:10px;
+	-webkit-appearance: none;
+    width: 200px;
+    height: 5px;
+    border-radius: 15px;
+    background-color: #1c1b1b;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    float: right;
+    transition-duration: 0.2s;
+}
+.slider::-webkit-slider-thumb{
+	-webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: rgb(47, 47, 47);
+    cursor: pointer;
+	border-radius: 25px;
+	transition-duration: 0.2s;
+}
+span.settings-value{
+	background-color: #1c1b1b;
+	padding:4px;
+	border-radius: 5px;
+	border:1px solid rgb(47, 47, 47);
+}
