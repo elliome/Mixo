@@ -2,7 +2,7 @@
 <head>
 <title>DIMBRY</title>
 
-<?php $doc_root = "/dim/"; ?>
+<?php $doc_root = "/Mixo/"; ?>
 	<link rel="stylesheet" href="<?php echo $doc_root?>stylesheets/main.css">
 	<link rel="stylesheet" href="<?php echo $doc_root?>stylesheets/drumroll-canvas.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -152,13 +152,13 @@
 				<div class="scale-key" 			id="scale-key-11"	onclick='multichoice("scale-key","scale-key-11")' >B</div>
 			</div>
 			<div class="scale-mode-container">
-				<div class="scale-mode" id="scale-mode-0" onclick='multichoice("scale-mode","scale-mode-0")'>Major/Ionian</div>
-				<div class="scale-mode" id="scale-mode-1" onclick='multichoice("scale-mode","scale-mode-1")'>Minor/Aeolian</div>
-				<div class="scale-mode" id="scale-mode-2" onclick='multichoice("scale-mode","scale-mode-2")'>Dorian</div>
-				<div class="scale-mode" id="scale-mode-3" onclick='multichoice("scale-mode","scale-mode-3")'>Phrygian</div>
-				<div class="scale-mode" id="scale-mode-4" onclick='multichoice("scale-mode","scale-mode-4")'>Lydian</div>
-				<div class="scale-mode" id="scale-mode-5" onclick='multichoice("scale-mode","scale-mode-5")'>Mixolydian</div>
-				<div class="scale-mode" id="scale-mode-6" onclick='multichoice("scale-mode","scale-mode-6")'>Locrian</div>
+				<div class="scale-mode" 		id="scale-mode-0" 	onclick='multichoice("scale-mode","scale-mode-0")'>Major/Ionian</div>
+				<div class="scale-mode" 		id="scale-mode-2" 	onclick='multichoice("scale-mode","scale-mode-2")'>Dorian</div>
+				<div class="scale-mode" 		id="scale-mode-3" 	onclick='multichoice("scale-mode","scale-mode-3")'>Phrygian</div>
+				<div class="scale-mode" 		id="scale-mode-4" 	onclick='multichoice("scale-mode","scale-mode-4")'>Lydian</div>
+				<div class="scale-mode" 		id="scale-mode-5" 	onclick='multichoice("scale-mode","scale-mode-5")'>Mixolydian</div>
+				<div class="scale-mode" 		id="scale-mode-1" 	onclick='multichoice("scale-mode","scale-mode-1")'>Minor/Aeolian</div>
+				<div class="scale-mode" 		id="scale-mode-6" 	onclick='multichoice("scale-mode","scale-mode-6")'>Locrian</div>
 			</div>
 		</div>
 

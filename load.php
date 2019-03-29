@@ -7,8 +7,8 @@ $fileName = $_POST["fileName"];
 $doc_root = "";
 
 //$handle = fopen($_SERVER["DOCUMENT_ROOT"] . "/dim/saves/" . $fileName,"r");
-$handle = fopen($_SERVER["DOCUMENT_ROOT"] . $doc_root ."/dim/saves/$fileName","r");
-$pianoRoll = fread($handle,filesize($_SERVER["DOCUMENT_ROOT"] . $doc_root ."/dim/saves/$fileName"));
+$handle = fopen($_SERVER["DOCUMENT_ROOT"] . $doc_root ."/Mixo/saves/$fileName","r");
+$pianoRoll = fread($handle,filesize($_SERVER["DOCUMENT_ROOT"] . $doc_root ."/Mixo/saves/$fileName"));
 fclose($handle);
 
 echo $pianoRoll;

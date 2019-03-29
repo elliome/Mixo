@@ -2,7 +2,7 @@
 <head>
 <title>DIMBRY</title>
 
-<?php $doc_root = "/dim/"; ?>
+<?php $doc_root = "/Mixo/"; ?>
 
 	<link rel="stylesheet" href="<?php echo $doc_root?>stylesheets/main.css">
 	<link rel="stylesheet" href="<?php echo $doc_root?>stylesheets/drumroll-canvas.css">

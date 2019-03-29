@@ -145,6 +145,12 @@
 		this.createNoteQue();
 	}
 
+	placeNote (_x,_y,_color){
+		
+		this.notes.push(new Note(this.lastNoteWidth * _x, height - ((this.key + _y) * this.noteTrackHeight),this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote( height - ((this.key + _y) * this.noteTrackHeight)),_color,"sine",false));
+		
+	}
+
 	stampScale(_scalekey, _scaleMode){
 		this.key 	=	Number(_scalekey);
 		this.mode 	=	Number(_scaleMode);
@@ -154,133 +160,128 @@
 
 		switch(this.mode){
 			case 0: 
-				this.tempY = height - ((this.key + 1) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * 0,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 3) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * 1,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 5) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * 2,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 6) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * 3,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 8) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * 4,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 10) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * 5,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 12) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * 6,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 13) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * 7,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgba(40,167,255)","sine",false));
+				this.placeNote(0,1,"rgb(255,20,108)");
+				this.placeNote(1,3,"rgb(255,20,108)");
+				this.placeNote(2,5,"rgb(255,20,108)");
+				this.placeNote(3,6,"rgb(255,20,108)");
+				this.placeNote(4,8,"rgb(255,20,108)");
+				this.placeNote(5,10,"rgb(255,20,108)");
+				this.placeNote(6,12,"rgb(255,20,108)");
+				this.placeNote(7,13,"rgb(40,167,255)");
+				this.placeNote(14,	1,"rgb(255,20,108)");
+				this.placeNote(13,	3,"rgb(255,20,108)");
+				this.placeNote(12,	5,"rgb(255,20,108)");
+				this.placeNote(11,	6,"rgb(255,20,108)");
+				this.placeNote(10,	8,"rgb(255,20,108)");
+				this.placeNote(9,	10,"rgb(255,20,108)");
+				this.placeNote(8,	12,"rgb(255,20,108)");
 			break;
 			case 1:
-				this.tempY = height - ((this.key + 1) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 3) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 4) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 6) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 8) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 9) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 11) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 13	) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgba(40,167,255)","sine",false));
+				this.placeNote(0,1,"rgb(255,20,108)");
+				this.placeNote(1,3,"rgb(255,20,108)");
+				this.placeNote(2,4,"rgb(255,20,108)");
+				this.placeNote(3,6,"rgb(255,20,108)");
+				this.placeNote(4,8,"rgb(255,20,108)");
+				this.placeNote(5,9,"rgb(255,20,108)");
+				this.placeNote(6,11,"rgb(255,20,108)");
+				this.placeNote(7,13,"rgb(40,167,255");
+				this.placeNote(14,	1,"rgb(255,20,108)");
+				this.placeNote(13,	3,"rgb(255,20,108)");
+				this.placeNote(12,	4,"rgb(255,20,108)");
+				this.placeNote(11,	6,"rgb(255,20,108)");
+				this.placeNote(10,	8,"rgb(255,20,108)");
+				this.placeNote(9,	9,"rgb(255,20,108)");
+				this.placeNote(8,	11,"rgb(255,20,108)");
 			break;
 			case 2:
-				this.tempY = height - ((this.key + 1) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 3) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 4) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 6) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 8) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 10) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 11) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 13	) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgba(40,167,255)","sine",false));
+				this.placeNote(0,1,"rgb(255,20,108)");
+				this.placeNote(1,3,"rgb(255,20,108)");
+				this.placeNote(2,4,"rgb(255,20,108)");
+				this.placeNote(3,6,"rgb(255,20,108)");
+				this.placeNote(4,8,"rgb(255,20,108)");
+				this.placeNote(5,10,"rgb(255,20,108)");
+				this.placeNote(6,11,"rgb(255,20,108)");
+				this.placeNote(7,13,"rgb(40,167,255");
+				this.placeNote(14,	1,"rgb(255,20,108)");
+				this.placeNote(13,	3,"rgb(255,20,108)");
+				this.placeNote(12,	4,"rgb(255,20,108)");
+				this.placeNote(11,	6,"rgb(255,20,108)");
+				this.placeNote(10,	8,"rgb(255,20,108)");
+				this.placeNote(9,	10,"rgb(255,20,108)");
+				this.placeNote(8,	11,"rgb(255,20,108)");
+
+				
 			break;
 			case 3:
-				this.tempY = height - ((this.key + 1) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 2) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 4) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 6) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 8) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 9) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 11) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 13	) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgba(40,167,255)","sine",false));
+				this.placeNote(0,1,"rgb(255,20,108)");
+				this.placeNote(1,2,"rgb(255,20,108)");
+				this.placeNote(2,4,"rgb(255,20,108)");
+				this.placeNote(3,6,"rgb(255,20,108)");
+				this.placeNote(4,8,"rgb(255,20,108)");
+				this.placeNote(5,9,"rgb(255,20,108)");
+				this.placeNote(6,11,"rgb(255,20,108)");
+				this.placeNote(7,13,"rgb(40,167,255");				
+				this.placeNote(14,	1,"rgb(255,20,108)");
+				this.placeNote(13,	2,"rgb(255,20,108)");
+				this.placeNote(12,	4,"rgb(255,20,108)");
+				this.placeNote(11,	6,"rgb(255,20,108)");
+				this.placeNote(10,	8,"rgb(255,20,108)");
+				this.placeNote(9,	9,"rgb(255,20,108)");
+				this.placeNote(8,	11,"rgb(255,20,108)");
 			break;
 			case 4:
-				this.tempY = height - ((this.key + 1) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 3) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 5) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 7) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 8) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 10) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 12) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 13	) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgba(40,167,255)","sine",false));
+				this.placeNote(0,1,"rgb(255,20,108)");
+				this.placeNote(1,3,"rgb(255,20,108)");
+				this.placeNote(2,5,"rgb(255,20,108)");
+				this.placeNote(3,7,"rgb(255,20,108)");
+				this.placeNote(4,8,"rgb(255,20,108)");
+				this.placeNote(5,10,"rgb(255,20,108)");
+				this.placeNote(6,12,"rgb(255,20,108)");
+				this.placeNote(7,13,"rgb(40,167,255");				
+				this.placeNote(14,	1,"rgb(255,20,108)");
+				this.placeNote(13,	3,"rgb(255,20,108)");
+				this.placeNote(12,	5,"rgb(255,20,108)");
+				this.placeNote(11,	7,"rgb(255,20,108)");
+				this.placeNote(10,	8,"rgb(255,20,108)");
+				this.placeNote(9,	10,"rgb(255,20,108)");
+				this.placeNote(8,	12,"rgb(255,20,108)");
 			break;
 			case 5:
-				this.tempY = height - ((this.key + 1) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 3) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 5) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 6) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 8) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 10) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 11) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 13) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgba(40,167,255)","sine",false));
+				this.placeNote(0,1,"rgb(255,20,108)");
+				this.placeNote(1,3,"rgb(255,20,108)");
+				this.placeNote(2,5,"rgb(255,20,108)");
+				this.placeNote(3,6,"rgb(255,20,108)");
+				this.placeNote(4,8,"rgb(255,20,108)");
+				this.placeNote(5,10,"rgb(255,20,108)");
+				this.placeNote(6,11,"rgb(255,20,108)");
+				this.placeNote(7,13,"rgb(40,167,255");
+				this.placeNote(14,	1,"rgb(255,20,108)");
+				this.placeNote(13,	3,"rgb(255,20,108)");
+				this.placeNote(12,	5,"rgb(255,20,108)");
+				this.placeNote(11,	6,"rgb(255,20,108)");
+				this.placeNote(10,	8,"rgb(255,20,108)");
+				this.placeNote(9,	10,"rgb(255,20,108)");
+				this.placeNote(8,	11,"rgb(255,20,108)");
 			break;
 				case 6:
-				this.tempY = height - ((this.key + 1) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 2) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 4) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 6) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 7) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 9) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 11) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgb(255,20,108)","sine",false));
-				this.tempY = height - ((this.key + 13) * this.noteTrackHeight);
-				this.notes.push(new Note(this.lastNoteWidth * this.notes.length,this.tempY,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.tempY),"rgba(40,167,255)","sine",false));
+				this.placeNote(0,1,"rgb(255,20,108)");
+				this.placeNote(1,2,"rgb(255,20,108)");
+				this.placeNote(2,4,"rgb(255,20,108)");
+				this.placeNote(3,6,"rgb(255,20,108)");
+				this.placeNote(4,7,"rgb(255,20,108)");
+				this.placeNote(5,9,"rgb(255,20,108)");
+				this.placeNote(6,11,"rgb(255,20,108)");
+				this.placeNote(7,13,"rgb(40,167,255");
+				this.placeNote(14,	1,"rgb(255,20,108)");
+				this.placeNote(13,	2,"rgb(255,20,108)");
+				this.placeNote(12,	4,"rgb(255,20,108)");
+				this.placeNote(11,	6,"rgb(255,20,108)");
+				this.placeNote(10,	7,"rgb(255,20,108)");
+				this.placeNote(9,	9,"rgb(255,20,108)");
+				this.placeNote(8,	11,"rgb(255,20,108)");
 			break;
 		}
-
+		this.createNoteQue();
 		console.log("key " + this.key + " mode " + this.mode);
 	}
 
