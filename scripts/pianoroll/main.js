@@ -155,7 +155,7 @@ function save(){
 
 	// use post because no limit to data passed / string length
 	// get has 2048 byte limit
-	$.post("save.php", {pianoroll: pianorollNotes, fileName: prompt("Chose a filename:")}).done(function(data){
+	$.post("/Mixo/save.php", {pianoroll: pianorollNotes, fileName: prompt("Chose a filename:")}).done(function(data){
 		//console.log(data);
 	});
 	
@@ -254,6 +254,5 @@ function step() {
 
 //load("shelter3");
 //load("mobamba2");
-load("kids8");
 
 window.requestAnimationFrame(step);

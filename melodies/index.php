@@ -70,19 +70,19 @@
 		</div>
 
 		<div class="preset-container-container" >
-			<div class="preset-container" onclick="load('shelter3')">
+			<div class="preset-container" onclick="load('shelterLEAD')">
 				<img src="<?php echo $doc_root?>img/shelter.jpg" alt="">
 				<p class="preset-label">Shelter</p>
 			</div>
 
-			<div class="preset-container" onclick="load('kids8')">
+			<div class="preset-container" onclick="load('kidsLEAD')">
 				<img src="<?php echo $doc_root?>img/kids.jpg" alt="">
 				<p class="preset-label">Kids</p>
 			</div>
 			
-			<div class="preset-container" onclick="load('kubs')">
-				<img src="<?php echo $doc_root?>img/entertainer.png" alt="">
-				<p class="preset-label">Entertainer</p>				
+			<div class="preset-container" onclick="load('sad')">
+				<img src="<?php echo $doc_root?>img/sad.jpg" alt="">
+				<p class="preset-label">SAD</p>				
 			</div>
 			
 			<div class="preset-container" onclick="load('mobamba2')">
