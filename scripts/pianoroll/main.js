@@ -165,7 +165,7 @@ function save(){
 
 function load(_fileName){
 	clearNotes();
-	$.post("load.php", {fileName: _fileName}).done(function(data){
+	$.post("/Mixo/load.php", {fileName: _fileName}).done(function(data){
 	//$.post("load.php", {fileName: "4483065760"}).done(function(data){
 
 		//console.log(data);

@@ -257,8 +257,21 @@ div.breadcrumb:nth-of-type(even) > .breadcrumb-text{
 	border-radius: 20px;
 	border: 0px solid rgba(0,0,0,0.1);
 	/* overflow: hidden; */
+	position: relative;
 }
-.preset-container-container:hover{
+.preset-container-container::before{
+	position: absolute;
+	top:-2px;
+	left:-2px;
+	width:calc(100% + 4px);
+	height:calc(100% + 4px);
+	background-color: white;
+	content: "";
+	z-index: -1;
+	background: linear-gradient(152deg, rgba(255,63,20,.8) 0%, rgba(255,20,108,.8) 34%, rgba(188,40,255,.8) 67%, rgba(40,167,255,.8) 100%);
+	border-radius: 10px;
+	filter: blur(100px);
+	opacity: .6;
 }
 .preset-container{
 	background-color: rgb(25,25,25);
