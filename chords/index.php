@@ -43,7 +43,7 @@
 				
 				<p>Chords can be defined by the formula used to create them.</p>
 				<p>For example to formula for a Major chord is <span class="h2Desc">1-4-3</span>.</p>
-				<p>Each number represets how many semitones or intervals to move up. We'll use the C Major chord as an example.</p>
+				<p>Each number represents how many semitones or intervals to move up. We'll use the C Major chord as an example.</p>
 				<p>First we start on the <span class="h2Desc">C</span> note, since this is the root note we wont move any intervals.</p>
 				<p>Then we must move up 4 semitones for our next note. In this case it would be <span class="h2Desc">E</span>.</p>
 				<p>Next we will move up 3 notes from the previous note. 3 notes up from E would be <span class="h2Desc">G</span>. This makes the whole chord <span class="h2Desc">C-E-G</span>.</p>
