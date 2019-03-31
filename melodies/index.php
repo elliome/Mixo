@@ -99,8 +99,8 @@
 
 	<?php //include "include/pianoroll-settings.php"; ?>
 	<?php 
-		$lOctave = 4;
-		$hOctave = 5;
+		$lOctave = 3;
+		$hOctave = 4;
 	?>	
     <?php include $_SERVER["DOCUMENT_ROOT"].$doc_root."include/pianoroll.php"; ?>
 </body>

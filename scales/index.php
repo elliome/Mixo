@@ -71,14 +71,14 @@
 				<P>Common in folk music, especially in Asian music. Also known as the "black note" scale.</P>
 				<div class="paragraph-divider no-margin"></div>
 					<div class="instructions">
-					<h2>Tetratonic &</h2>
-					<p class="h2Desc">4 notes per octave</p>
-					<h2 style="margin-top:20px;">Tritonic &</h2>
-					<p class="h2Desc">3 notes per octave</p>
-					<h2 style="margin-top:20px;">Diatonic</h2>
-					<p class="h2Desc">2 notes per octave</p>
-					<p>Are all generally limited to prehestoric primative music.</p>
-				</div>
+						<h2>Tetratonic &</h2>
+						<p class="h2Desc">4 notes per octave</p>
+						<h2 style="margin-top:20px;">Tritonic &</h2>
+						<p class="h2Desc">3 notes per octave</p>
+						<h2 style="margin-top:20px;">Diatonic</h2>
+						<p class="h2Desc">2 notes per octave</p>
+						<p>Are all generally limited to prehestoric primative music.</p>
+					</div>
 				<div class="paragraph-divider no-margin"></div>
 				<h2>Monotonic</h2>
 				<p class="h2Desc">1 notes per octave</p>

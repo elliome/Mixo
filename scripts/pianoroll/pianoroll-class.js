@@ -28,6 +28,7 @@
 		this.snap = 4;
 		this.lastNoteWidth = (100/this.snap);
 		this.d = new Date()
+		this.stampChord = 0;
 		//console.log(this.numberOfNoteTracks)
 
 		for(this.i = this.lowestNote; this.i < this.highestNote; this.i++){
@@ -48,6 +49,7 @@
 			if(this.noteUnderMouse == null){
 				////////////////////////|----- X POS ----| ----- Y POS -----|------ WIDTH ------|------- HEIGHT -----|--------ID-------|----------NOTE NUMBER----------|--COLOR---|----WAVE_T---|TRIG|
 				this.notes.push(new Note(this.getSnap(e.x),this.getSnapY(e.y),this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote(this.getSnapY(e.y)),midiColor,this.waveType,true));
+				this.StampChord(this.getSnap(e.x),this.getSnapY(e.y));
 			}else{
 				if(this.notes[this.noteUnderMouse].Draggable(mousePos)){
 					this.dragging = true;
@@ -149,6 +151,10 @@
 		
 		this.notes.push(new Note(this.lastNoteWidth * _x, height - ((this.key + _y) * this.noteTrackHeight),this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote( height - ((this.key + _y) * this.noteTrackHeight)),_color,"sine",false));
 		
+	}
+
+	placeChordNote(_x,_y){
+		this.notes.push(new Note(_x,_y,this.lastNoteWidth,this.noteTrackHeight,this.notes.length,this.getNote( height - ((this.key + _y) * this.noteTrackHeight)),"rgb(255,20,108)","sine",false));
 	}
 
 	stampScale(_scalekey, _scaleMode){
@@ -285,6 +291,52 @@
 		console.log("key " + this.key + " mode " + this.mode);
 	}
 
+	StampChord(_x,_y){
+		switch(this.stampChord){
+			case 0:
+			break;
+			case 1:
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 4));
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 7));
+			break;
+			case 2:
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 3));
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 7));
+			break;
+			case 3:
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 2));
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 7));
+			break;
+			case 4:
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 5));
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 7));
+			break;
+			case 5:
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 4));
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 8));
+			break;
+			case 6:
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 4));
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 7));
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 11));
+			break;
+			case 7:
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 3));
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 7));
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 10));
+			break;
+			case 8:
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 4));
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 7));
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 10));
+			break;
+			case 9:
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 3));
+				this.placeChordNote(_x,_y - (this.noteTrackHeight * 6));
+			break;
+		}
+		this.createNoteQue();
+	}
 
 	playStep(_step){
 		this.position = _step;

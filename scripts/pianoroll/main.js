@@ -27,7 +27,6 @@ var pianorollContainer = document.getElementById("pianoroll-container");
 var drumrollContainer = document.getElementById("drumroll-canvas-container");
 var scaleMode = 0;
 var scaleKey = 0;
-var chordStamp = "off";
 var midiColor = "green";
 var noteLength = 1;
 var bpm = 100;
@@ -203,6 +202,9 @@ function multichoice(_variable,_option){
 		case "scale-mode":
 			scaleMode = _option.substring(_option.length - 1, _option.length);
 			pianoroll.stampScale(scaleKey,scaleMode);
+		break;
+		case "chord-type":
+			pianoroll.stampChord = Number(_option.substring(_option.length - 1, _option.length));
 		break;
 	}
 	var buttons = document.getElementsByClassName(_variable);
