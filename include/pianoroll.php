@@ -63,6 +63,7 @@
         <div class="piano-roll-controls-container">
             <i class="fas fa-play piano-roll-controls-icon" onclick="play()"></i>
             <i class="fas fa-stop piano-roll-controls-icon" onclick="stop()"></i>
+            <i class="fa fa-trash piano-roll-controls-icon" onclick="clearNotes()"></i>
         </div>
 
         <div class="piano-roll-cursor-container">

@@ -46,7 +46,7 @@
 				<p>Each number represents how many semitones or intervals to move up. We'll use the C Major chord as an example.</p>
 				<p>First we start on the <span class="h2Desc">C</span> note, since this is the root note we wont move any intervals.</p>
 				<p>Then we must move up 4 semitones for our next note. In this case it would be <span class="h2Desc">E</span>.</p>
-				<p>Next we will move up 3 notes from the previous note. 3 notes up from E would be <span class="h2Desc">G</span>. This makes the whole chord <span class="h2Desc">C-E-G</span>.</p>
+				<p>Next we will move up 3 semitones from the previous note. 3 notes up from E would be <span class="h2Desc">G</span>. This makes the whole chord <span class="h2Desc">C-E-G</span>.</p>
 				<p>By using this method of counting intervals we are able to use formulars like <span class="h2Desc">1-4-3</span> to describe the structure of a chord.</p>
 
 				<div class="paragraph-divider"></div>
