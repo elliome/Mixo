@@ -2,7 +2,7 @@
 <head>
 <title>DIMBRY</title>
 
-<?php $doc_root = "/Mixo/"; ?>
+<?php $doc_root = "/students/2017-HND/elliot/Mixo/"; ?>
 
 	<link rel="stylesheet" href="<?php echo $doc_root?>stylesheets/main.css">
 	<link rel="stylesheet" href="<?php echo $doc_root?>stylesheets/drumroll-canvas.css">

@@ -2,7 +2,7 @@
 <head>
 <title>DIMBRY</title>
 
-<?php $doc_root = "/dim/"; ?>
+<?php $doc_root = "/students/2017-HND/elliot/Mixo/"; ?>
 	<link rel="stylesheet" href="<?php echo $doc_root?>stylesheets/main.css">
 	<link rel="stylesheet" href="<?php echo $doc_root?>stylesheets/drumroll-canvas.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -30,8 +30,17 @@
 
     <?php //include "include/drumpattern.php"; ?>
 
-	<?php //include "include/pianoroll-settings.php"; ?>
-
+	<?php include $_SERVER["DOCUMENT_ROOT"].$doc_root."include/pianoroll-settings.php"; ?>
+	<?php 
+		$lOctave = 4;
+		$hOctave = 6;
+	?>
     <?php include $_SERVER["DOCUMENT_ROOT"].$doc_root."include/pianoroll.php"; ?>
 </body>
+
+<script type="text/javascript">
+	multichoice('wave-type','sine')
+	multichoice("chord-stamp","chord-stamp-0");
+</script>
+
 </html>

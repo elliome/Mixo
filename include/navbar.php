@@ -87,4 +87,4 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="/dim/scripts/breadcrumb.js"></script>
+<script type="text/javascript" src="<?php echo $doc_root?>scripts/breadcrumb.js"></script>

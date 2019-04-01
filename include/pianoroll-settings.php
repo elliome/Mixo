@@ -1,32 +1,40 @@
 <div id="pianoroll-settings-container"> 
 	<p class="settings-panel-title">Pianoroll settings</p>
-
+	<div class="paragraph-divider no-margin"></div>
 	<div class="settings-panel-section">
 		<div class="setting-container">
 			<p class="settings-label">Wave type</p> 
 			<div class="settings-multichoice-container">
-				<div class="settings-multichoice-option wave-type" id="sine" onclick="multichoice('wave-type','sine')" ><p class="settings-multichoice-option">Sine</p></div>
-				<div class="settings-multichoice-option wave-type" id="sawtooth"  onclick="multichoice('wave-type','sawtooth')" ><p class="settings-multichoice-option">Saw Tooth</p></div>
-				<div class="settings-multichoice-option wave-type" id="square"  onclick="multichoice('wave-type','square')" ><p class="settings-multichoice-option">Square</p></div>
-				<div class="settings-multichoice-option wave-type" id="triangle"  onclick="multichoice('wave-type','triangle')" ><p class="settings-multichoice-option">Triangle</p></div>
+				<div class="settings-multichoice-option wave-type" 		id="sine" 			onclick="multichoice('wave-type','sine')" ><p class="settings-multichoice-option">Sine</p></div>
+				<div class="settings-multichoice-option wave-type" 		id="sawtooth"  		onclick="multichoice('wave-type','sawtooth')" ><p class="settings-multichoice-option">Saw Tooth</p></div>
+				<div class="settings-multichoice-option wave-type" 		id="square"  		onclick="multichoice('wave-type','square')" ><p class="settings-multichoice-option">Square</p></div>
+				<div class="settings-multichoice-option wave-type" 		id="triangle"  		onclick="multichoice('wave-type','triangle')" ><p class="settings-multichoice-option">Triangle</p></div>
 			</div>
 		</div>
 		<div class="setting-container">
 			<p class="settings-label">Note Color</p>
 			<div class="settings-multichoice-container">
-				<div class="settings-multichoice-option midi-color" id="red" onclick="multichoice('midi-color','red')" ><p class="settings-multichoice-option">Red</p></div>
-				<div class="settings-multichoice-option midi-color" id="blue" onclick="multichoice('midi-color','blue')" ><p class="settings-multichoice-option">Blue</p></div>
-				<div class="settings-multichoice-option midi-color" id="purple" onclick="multichoice('midi-color','purple')" ><p class="settings-multichoice-option">Purple</p></div>
-				<div class="settings-multichoice-option midi-color" id="green" onclick="multichoice('midi-color','green')" ><p class="settings-multichoice-option">Green</p></div>
-				<div class="settings-multichoice-option midi-color" id="orange" onclick="multichoice('midi-color','orange')" ><p class="settings-multichoice-option">Orange</p></div>
+				<div class="settings-multichoice-option midi-color" 	id="red" 			onclick="multichoice('midi-color','red')" ><p class="settings-multichoice-option">Red</p></div>
+				<div class="settings-multichoice-option midi-color" 	id="blue" 			onclick="multichoice('midi-color','blue')" ><p class="settings-multichoice-option">Blue</p></div>
+				<div class="settings-multichoice-option midi-color" 	id="purple" 		onclick="multichoice('midi-color','purple')" ><p class="settings-multichoice-option">Purple</p></div>
+				<div class="settings-multichoice-option midi-color" 	id="green" 			onclick="multichoice('midi-color','green')" ><p class="settings-multichoice-option">Green</p></div>
+				<div class="settings-multichoice-option midi-color" 	id="orange" 		onclick="multichoice('midi-color','orange')" ><p class="settings-multichoice-option">Orange</p></div>
 			</div>
 		</div>
 		<div class="setting-container">
 			<p class="settings-label">Stamp Chord</p>
 			<div class="settings-multichoice-container">
-				<div class="settings-multichoice-option chord-stamp" id="minor" onclick="multichoice('chord-stamp','minor')" ><p class="settings-multichoice-option">Minor</p></div>
-				<div class="settings-multichoice-option chord-stamp" id="major" onclick="multichoice('chord-stamp','major')"><p class="settings-multichoice-option">Major</p></div>
-				<div class="settings-multichoice-option chord-stamp" id="off"   onclick="multichoice('chord-stamp','off')"><p class="settings-multichoice-option">Off</p></div>
+				<div class="chord-stamp settings-multichoice-option"	id="chord-stamp-1" 	onclick="multichoice('chord-stamp','chord-stamp-1')"><p class="settings-multichoice-option">Major</p></div>
+				<div class="chord-stamp settings-multichoice-option"	id="chord-stamp-2"	onclick="multichoice('chord-stamp','chord-stamp-2')"><p class="settings-multichoice-option">Minor</p></div>
+				<div class="chord-stamp settings-multichoice-option"	id="chord-stamp-3"	onclick="multichoice('chord-stamp','chord-stamp-3')"><p class="settings-multichoice-option">Sus2</p></div>
+				<div class="chord-stamp settings-multichoice-option"	id="chord-stamp-4"	onclick="multichoice('chord-stamp','chord-stamp-4')"><p class="settings-multichoice-option">Sus4</p></div>
+				<div class="chord-stamp settings-multichoice-option"	id="chord-stamp-5"	onclick="multichoice('chord-stamp','chord-stamp-5')"><p class="settings-multichoice-option">Augmented</p></div>
+				<div class="chord-stamp settings-multichoice-option"	id="chord-stamp-6"	onclick="multichoice('chord-stamp','chord-stamp-6')"><p class="settings-multichoice-option">Major Seventh</p></div>
+				<div class="chord-stamp settings-multichoice-option"	id="chord-stamp-7"	onclick="multichoice('chord-stamp','chord-stamp-7')"><p class="settings-multichoice-option">Minor Seventh</p></div>
+				<div class="chord-stamp settings-multichoice-option"	id="chord-stamp-8"	onclick="multichoice('chord-stamp','chord-stamp-8')"><p class="settings-multichoice-option">Dominant Seventh</p></div>
+				<div class="chord-stamp settings-multichoice-option"	id="chord-stamp-9"	onclick="multichoice('chord-stamp','chord-stamp-9')"><p class="settings-multichoice-option">Diminished</p></div>
+				<div class="chord-stamp settings-multichoice-option" 	id="chord-stamp-0"  onclick="multichoice('chord-stamp','chord-stamp-0')"><p class="settings-multichoice-option">Off</p></div>
+
 			</div>
 		</div>
 		<div class="setting-container">
@@ -63,3 +71,4 @@
 	</div>
 
 </div>
+

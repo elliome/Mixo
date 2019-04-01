@@ -154,7 +154,7 @@ function save(){
 
 	// use post because no limit to data passed / string length
 	// get has 2048 byte limit
-	$.post("/Mixo/save.php", {pianoroll: pianorollNotes, fileName: prompt("Chose a filename:")}).done(function(data){
+	$.post("/students/2017-HND/elliot/Mixo/save.php", {pianoroll: pianorollNotes, fileName: prompt("Chose a filename:")}).done(function(data){
 		//console.log(data);
 	});
 	
@@ -164,7 +164,7 @@ function save(){
 
 function load(_fileName){
 	clearNotes();
-	$.post("/Mixo/load.php", {fileName: _fileName}).done(function(data){
+	$.post("/students/2017-HND/elliot/Mixo/load.php", {fileName: _fileName}).done(function(data){
 	//$.post("load.php", {fileName: "4483065760"}).done(function(data){
 
 		//console.log(data);
@@ -204,6 +204,9 @@ function multichoice(_variable,_option){
 			pianoroll.stampScale(scaleKey,scaleMode);
 		break;
 		case "chord-type":
+			pianoroll.stampChord = Number(_option.substring(_option.length - 1, _option.length));
+		break;
+		case "chord-stamp":
 			pianoroll.stampChord = Number(_option.substring(_option.length - 1, _option.length));
 		break;
 	}
