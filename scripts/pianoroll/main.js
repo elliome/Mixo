@@ -39,10 +39,10 @@ if(drumRollExists){
 }
 
 if(pianoRollSettingsExists){
-	multichoice('midi-color','green');
-	multichoice('chord-stamp','off');
-	multichoice('wave-type','sine');
-	sliderUpdate()
+	// multichoice('midi-color','green');
+	// multichoice('chord-stamp','off');
+	// multichoice('wave-type','sine');
+	//sliderUpdate()
 }
 
 document.body.addEventListener("mousemove", function(e) {
@@ -154,7 +154,7 @@ function save(){
 
 	// use post because no limit to data passed / string length
 	// get has 2048 byte limit
-	$.post("/students/2017-HND/elliot/Mixo/save.php", {pianoroll: pianorollNotes, fileName: prompt("Chose a filename:")}).done(function(data){
+	$.post("/save.php", {pianoroll: pianorollNotes, fileName: prompt("Chose a filename:")}).done(function(data){
 		//console.log(data);
 	});
 	
@@ -164,7 +164,7 @@ function save(){
 
 function load(_fileName){
 	clearNotes();
-	$.post("/students/2017-HND/elliot/Mixo/load.php", {fileName: _fileName}).done(function(data){
+	$.post("/load.php", {fileName: _fileName}).done(function(data){
 	//$.post("load.php", {fileName: "4483065760"}).done(function(data){
 
 		//console.log(data);
@@ -187,7 +187,7 @@ function clearNotes(){
 function multichoice(_variable,_option){
 	switch(_variable){
 		case "chord-stamp":
-			chordStamp = _option;
+		pianoroll.stampChord = Number(_option.substring(_option.length - 1, _option.length));
 		break;
 		case "midi-color":
 			midiColor = _option
@@ -205,6 +205,7 @@ function multichoice(_variable,_option){
 		break;
 		case "chord-type":
 			pianoroll.stampChord = Number(_option.substring(_option.length - 1, _option.length));
+			
 		break;
 		case "chord-stamp":
 			pianoroll.stampChord = Number(_option.substring(_option.length - 1, _option.length));
@@ -216,6 +217,7 @@ function multichoice(_variable,_option){
 		buttons[i].style.opacity = 0.6;
 	}
 	// document.getElementById(_option).style.backgroundColor = "rgb(255, 226, 237)"
+	
 	document.getElementById(_option).style.opacity = 1;
 }
 
@@ -223,9 +225,6 @@ function sliderUpdate(){
 	pianoroll.lastNoteWidth = Number(document.getElementById("note-length").value) * (100 / pianoroll.snap)
 	document.getElementById("note-length-label").innerHTML = document.getElementById("note-length").value;
 	
-	bpm = 5 * (document.getElementById("bpm").value / 100);
-	document.getElementById("bpm-label").innerHTML = document.getElementById("bpm").value
-
 	pianoroll.snap = document.getElementById("snap").value;
 
 	for(i = 0; i < document.getElementsByClassName("snap-label").length; i++){

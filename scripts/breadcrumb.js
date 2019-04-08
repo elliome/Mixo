@@ -5,7 +5,8 @@ if (pageNumber == null){
 document.getElementById("page" + pageNumber).style.color = "#FF1430";
 document.getElementById("page" + pageNumber).style.fontWeight = "900";
 //document.getElementById("page" + pageNumber).style.color = "white";
-if(pageNumber != 9){
+
+if(pageNumber != 8){
     document.getElementById("page" + (pageNumber + 1)).style.color = "white";
 }
 

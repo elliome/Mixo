@@ -32,7 +32,7 @@
 
             //pianoRollTrack("C:".($_lowOctave - 1));
 
-            echo "  <div class=\"piano-roll-note-label-container\">";
+            echo "  <div  class=\"piano-roll-note-label-container\">";
 
             for($i = $_highOctave; $i >= $_lowOctave ; $i--){
                 pianoRollTrack("B:".$i);			
@@ -58,7 +58,7 @@
 
     ?>
     
-    <div class="piano-roll-container">
+    <div id="hide-me-lol" class="piano-roll-container">
 
         <div class="piano-roll-controls-container">
             <i class="fas fa-play piano-roll-controls-icon" onclick="play()"></i>

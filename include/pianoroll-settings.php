@@ -37,37 +37,20 @@
 
 			</div>
 		</div>
-		<div class="setting-container">
-			<p class="settings-label">Velocity <span class="settings-value">40</span></p>
-			<input type="range" min="1" max="100" value="40" id="note-velocity" class="slider" onchange="" style="opacity: 1; pointer-events: auto;">
+		
+	</div>
+
+	<div class="settings-panel-section">
+	<div class="setting-container">
+			<p class="settings-label">Snap <span class="settings-value snap-label">4</span></p>
+			<input type="range" min="1" max="16" value="4" id="snap" class="slider" onchange="sliderUpdate()" style="opacity: 1; pointer-events: auto;">
 		</div>
 		<div class="setting-container">
 			<p class="settings-label">Duration <span class="settings-value" id="note-length-label">3</span>/<span class="settings-value snap-label">4</span></p>
 			<input type="range" min="1" max="10" value="1" id="note-length" class="slider" onchange="sliderUpdate()" style="opacity: 1; pointer-events: auto;">
 
 		</div>
-		
-	</div>
 
-	<div class="settings-panel-section">
-		<div class="setting-container">
-			<p class="settings-label">Volume <span class="settings-value">89</span></p>
-			<input type="range" min="1" max="100" value="89" id="master-volume" class="slider" onchange="" style="opacity: 1; pointer-events: auto;">
-		</div>
-		<div class="setting-container">
-			<p class="settings-label">BPM <span class="settings-value" id="bpm-label">137</span></p>
-			<input type="range" min="80" max="160" value="110" id="bpm" class="slider" onchange="" style="opacity: 1; pointer-events: auto;">
-		</div>
-		<div class="setting-container">
-			<p class="settings-label">Snap <span class="settings-value snap-label">4</span></p>
-			<input type="range" min="1" max="16" value="4" id="snap" class="slider" onchange="" style="opacity: 1; pointer-events: auto;">
-		</div>
-		<div class="setting-container">
-			<p class="settings-label">???</p>
-		</div>
-		<div class="setting-container">
-			<p class="settings-label">???</p>
-		</div>
 	</div>
 
 </div>

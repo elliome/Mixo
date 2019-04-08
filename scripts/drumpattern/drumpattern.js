@@ -8,10 +8,10 @@ class Drumroll{
         this.noteTrackHeight = 66;
         this.position = 0;
         this.noteQue = [];
-        this.kick =  new Audio("sounds/drums/kick.wav");
-        this.snare = new Audio("sounds/drums/snare.wav");
-        this.hihatopen = new Audio("sounds/drums/hihatopen.wav");
-        this.hihatclosed = new Audio("sounds/drums/hihatclosed.wav");
+        this.kick =  new Audio("/sounds/drums/kick.wav");
+        this.snare = new Audio("/sounds/drums/snare.wav");
+        this.hihatopen = new Audio("/sounds/drums/hihatopen.wav");
+        this.hihatclosed = new Audio("/sounds/drums/hihatclosed.wav");
     }
 
     MouseMove(_event){

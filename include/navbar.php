@@ -69,17 +69,17 @@
 		</div>
 
 		<div class="breadcrumb">
-			<a href="<?php echo $doc_root?>alltogther/"><p class="breadcrumb-text" id="page8" >All Together</p></a>
+			<a href="<?php echo $doc_root?>alltogther/"><p class="breadcrumb-text" id="page8" >all together</p></a>
 		</div>
 	
-		<div class="breadcrumb">
+		<!-- <div class="breadcrumb">
 			<p class="breadcrumb-text">></p>
 		</div>
 
 
 		<div class="breadcrumb">
 			<a href="<?php echo $doc_root?>sandbox/"><p class="breadcrumb-text" id="page9" >sandbox</p></a>
-		</div>
+		</div> -->
 
 	</div>
 	<div class="settings-container">
